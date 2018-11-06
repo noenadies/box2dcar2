@@ -331,9 +331,9 @@ varbol.body.static=true;
 varbol.body.setPolygon(pbarbol);
 */
 
-	var arbBody = new Phaser.Physics.Box2D.Body(this.game, null, truckBody.x+1200, -30, 0);
+	var arbBody = new Phaser.Physics.Box2D.Body(this.game, null, truckBody.x+1200, 0, 0);
 	arbBody.setChain(pbarbol);
-	arbBody.sprite=game.add.sprite(arbBody.x-134,arbBody.y-150,"arbol");
+	arbBody.sprite=game.add.sprite(arbBody.x-134,arbBody.y+100,"arbol");
 	arbBody.sprite.anchor.set(0.5);
 	arbBody.sprite.body=arbBody;
 	//console.log(arbBody.x+"    "+arbBody.y);
@@ -381,7 +381,7 @@ function update() {
 }
 
 function render() {
-game.debug.box2dWorld('rgb(0,255,0)');
+//game.debug.box2dWorld('rgb(0,255,0)');
 
 }
      
